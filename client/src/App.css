@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(43, 41, 41);
+}
+
+
+/* * NAVBAR COMPONENT */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    font-family: "Monolisa Light";
+    padding: 10px;
+    background-color: rgb(51, 141, 114);
+}
+
+.navbartitle {
+    font-size: 32px;
+    color: whitesmoke;
+    font-family: "Menlo";
+    flex: 1;
+    text-decoration: none;
+}
+
+.navbarlinks {
+    flex: 1;
+    display: flex;
+    justify-content: space-around;
+}
+
+.navbarlink {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+/* * Signup Page */
+.signupformtitle,
+.loginformtitle {
+    text-align: center;
+    font-size: 28px;
+    color: whitesmoke;
+    padding: 10px 0px;
+    margin: 20px 0px 0px;
+}
+
+.signupform {
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 90%;
+    margin: auto;
+}
+
+.signupusername,
+.signupemail,
+.signuppassword,
+.signupconfirmpassword,
+.loginusername,
+.loginpassword {
+    outline: none;
+    border: none;
+    padding: 8px 10px;
+    background-color: rgb(20, 19, 19);
+    font-family: "Monolisa Light";
+    color: rgb(175, 173, 173);
+}
+
+.signupsubmit,
+.loginsubmit {
+    width: 100px;
+    background: linear-gradient(to right, rgb(68, 189, 153), rgb(51, 141, 114));
+    outline: none;
+    border: none;
+    border-radius: 99999px;
+    padding: 8px 10px;
+    color: whitesmoke;
+    font-family: "Monolisa Light";
+    cursor: pointer;
+}
+
+.signupmsg,
+.loginmsg {
+    text-align: center;
+    width: 90%;
+    margin: auto;
+    background: linear-gradient(to right, rgb(0, 119, 128), rgb(43, 185, 174));
+    padding: 5px 0px;
+    border-radius: 99999px;
+    color: rgb(34, 33, 33);
+    font-size: 12px;
+    font-family: "MOnolisa";
+}
+
+
+
+/* *Login Form */
+.loginform {
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 90%;
+    margin: auto;
+}
