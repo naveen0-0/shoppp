@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import userpng from '../images/user.png';
+import shoppingcartimg from '../images/shoppingcart2.png';
 
 export default function NavBar() {
 
@@ -13,7 +14,10 @@ export default function NavBar() {
 
 
             {loggedIn ? (
-                <Link className="navbarlink" to="/user"><img src={userpng} alt="User" className="navbaruserimg" /></Link>
+                <div className="cartanduser">
+                    <Link className="user" to="/user"><img src={userpng} alt="User" className="userimg" /></Link>
+                    <Link className="cart" to="/cart"><img src={shoppingcartimg} alt="User" className="cartimg" /></Link>
+                </div>
             ) : (
                     <div className="navbarlinks">
                         <Link to="/signup" className="navbarlink">signup</Link>

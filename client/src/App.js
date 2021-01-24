@@ -6,7 +6,7 @@ import Signup from './components/Signup';
 import Login from './components/Login';
 import NavBar from './components/NavBar';
 import { getUser } from './utils/utils';
-
+import HomePage from './components/HomePage';
 
 export default function App() {
 
@@ -23,6 +23,7 @@ export default function App() {
     return (
         <Router>
             <NavBar />
+            <Route path="/" component={HomePage} />
             <Route path="/signup" component={Signup} />
             <Route path="/login" component={Login} />
         </Router>

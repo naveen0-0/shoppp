@@ -17,7 +17,7 @@ body {
     font-size: 14px;
     font-family: "Monolisa Light";
     padding: 10px;
-    background-color: rgb(51, 141, 114);
+    background-color: rgb(51, 90, 141);
 }
 
 .navbartitle {
@@ -39,8 +39,15 @@ body {
     color: whitesmoke;
 }
 
-.navbaruserimg {
-    cursor: pointer;
+.cartanduser {
+    width: 150px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.cartimg,
+.userimg {
     width: 30px;
 }
 
