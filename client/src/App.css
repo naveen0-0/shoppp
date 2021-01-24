@@ -39,6 +39,11 @@ body {
     color: whitesmoke;
 }
 
+.navbaruserimg {
+    cursor: pointer;
+    width: 30px;
+}
+
 /* * Signup Page */
 .signupformtitle,
 .loginformtitle {

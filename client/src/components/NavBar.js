@@ -13,7 +13,7 @@ export default function NavBar() {
 
 
             {loggedIn ? (
-                <div className="navbarlink"><img src={userpng} alt="User" /></div>
+                <Link className="navbarlink" to="/user"><img src={userpng} alt="User" className="navbaruserimg" /></Link>
             ) : (
                     <div className="navbarlinks">
                         <Link to="/signup" className="navbarlink">signup</Link>

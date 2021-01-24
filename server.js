@@ -5,9 +5,11 @@ const morgan = require('morgan');
 const helmet = require('helmet');
 const cors = require('cors');
 const AuthenRoutes = require('./routes/AuthenRoutes');
+const dotenv = require('dotenv')
 
 
 const app = express();
+
 
 //* MiddleWare
 app.use(express.json());
@@ -17,7 +19,7 @@ app.use(morgan("tiny"));
 app.use(cors());
 app.use(cookieParser());
 app.use(AuthenRoutes);
-
+dotenv.config();
 
 
 //* MongoDB Connection
