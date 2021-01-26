@@ -17,8 +17,8 @@ export default function Login() {
     const LoginSubmit = async e => {
         e.preventDefault();
         let { data } = await axios.post("/login", { username, password });
-        setMsg(data.msg)
-        dispatch({ type: "LOGGEDIN", payload: { username: data.username, email: data.email, loggedIn: data.loggedIn } })
+        setMsg(data.msg);
+        dispatch({ type: "LOGGEDIN", payload: { username: data.username, email: data.email, loggedIn: data.loggedIn } });
     }
 
     if (loggedIn) return <Redirect to="/" />
