@@ -4,8 +4,9 @@ const cookieParser = require('cookie-parser');
 const morgan = require('morgan');
 const helmet = require('helmet');
 const cors = require('cors');
-const AuthenRoutes = require('./routes/AuthenRoutes');
 const dotenv = require('dotenv')
+const AuthenRoutes = require('./routes/AuthenRoutes');
+const ProductRoutes = require('./routes/ProductRoutes');
 
 
 const app = express();
@@ -19,6 +20,7 @@ app.use(morgan("tiny"));
 app.use(cors());
 app.use(cookieParser());
 app.use(AuthenRoutes);
+app.use(ProductRoutes)
 dotenv.config();
 
 

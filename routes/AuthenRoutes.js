@@ -52,4 +52,10 @@ router.get('/getuser', (req, res) => {
 
 
 
+//* Logout Route
+
+router.post('/logout', (req, res) => {
+    res.clearCookie("logintoken").send({ username: "", email: "", loggedIn: false })
+})
+
 module.exports = router;

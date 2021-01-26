@@ -1,5 +1,18 @@
 const { Schema, model } = require('mongoose');
 
+
+const productSchema = new Schema({
+    productId: {
+        type: Number,
+        required: true
+    },
+    noOfProducts: {
+        type: Number,
+        required: true
+    }
+})
+
+
 const UserSchema = new Schema({
     username: {
         type: String,
@@ -12,7 +25,8 @@ const UserSchema = new Schema({
     password: {
         type: String,
         required: true
-    }
+    },
+    products: [productSchema]
 })
 
 

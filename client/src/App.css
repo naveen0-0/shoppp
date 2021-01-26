@@ -87,7 +87,7 @@ body {
 .signupsubmit,
 .loginsubmit {
     width: 100px;
-    background: linear-gradient(to right, rgb(68, 189, 153), rgb(51, 141, 114));
+    background: linear-gradient(to right, #4578bb, #335a8d);
     outline: none;
     border: none;
     border-radius: 99999px;
@@ -120,4 +120,136 @@ body {
     justify-content: space-around;
     width: 90%;
     margin: auto;
+}
+
+/* * Homepage */
+.allproductstitle {
+    text-align: center;
+    color: whitesmoke;
+    padding: 10px;
+    font-family: "Hack Regular";
+    font-size: 26px;
+}
+
+/* * Products */
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    width: 90%;
+    margin: 20px auto;
+}
+
+.product {
+    background-color: rgb(27, 26, 26);
+    padding: 20px;
+    position: relative;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.product:hover {
+    box-shadow: 3px 3px 10px #3a3838;
+}
+
+.productimg {
+    display: block;
+    width: 150px;
+    margin: auto;
+}
+
+.producttitle {
+    color: #335a8d;
+    text-align: center;
+    padding: 15px 0px;
+    font-family: "Monolisa Light";
+    font-size: 18px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.productdescription,
+.productcategory {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    padding: 10px;
+    color: rgb(155, 153, 151);
+    font-size: 12px;
+    font-family: "Monolisa";
+}
+
+.productcategory {
+    margin-bottom: 30px;
+}
+
+.priceandcart {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    padding: 10px;
+}
+
+.productprice {
+    text-align: center;
+    font-size: 15px;
+    color: #335a8d;
+    font-weight: bold;
+}
+
+.addtocart {
+    padding: 8px 10px;
+    outline: none;
+    border: none;
+    border-radius: 99999px;
+    font-family: "Monolisa Light";
+    background-color: #335a8d;
+    cursor: pointer;
+    color: rgb(209, 205, 205);
+}
+
+
+/* * User */
+
+.userdp {
+    display: block;
+    margin: 20px auto;
+}
+
+.username,
+.email {
+    text-align: center;
+    color: #335a8d;
+    padding: 5px;
+    font-weight: bold;
+}
+
+.logout {
+    width: 100px;
+    padding: 8px 10px;
+    border-radius: 999999px;
+    outline: none;
+    border: none;
+    color: whitesmoke;
+    font-family: "Monolisa Light";
+    margin: 10px auto;
+    background: linear-gradient(to right, #4578bb, #335a8d);
+    display: block;
+    cursor: pointer;
+}
+
+/* * Cart Component */
+.carttitle {
+    font-size: 22px;
+    text-align: center;
+    padding: 10px 0px;
+    color: #b6b6b6;
+    font-weight: bold;
+    font-family: "Monolisa Light";
 }
