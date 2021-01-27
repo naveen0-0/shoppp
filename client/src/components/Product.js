@@ -5,7 +5,6 @@ import axios from 'axios';
 export default function Product({ product }) {
 
     const { loggedIn, username } = useSelector(state => state.user);
-    const cart = useSelector(state => state.cart);
     const dispatch = useDispatch();
 
     const { title, description, category, price, image, id } = product;
@@ -13,6 +12,7 @@ export default function Product({ product }) {
     const AddToCart = async productId => {
         let { data } = await axios.post('/addproduct', { productId: productId, username: username })
         console.log(data);
+        dispatch({ type: "UPDATEANSINGLEITEM", payload: { productId: productId } })
     }
 
     return (

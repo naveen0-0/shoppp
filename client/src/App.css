@@ -9,6 +9,17 @@ body {
 }
 
 
+/* *Spinnner */
+
+.spinnercontainer {
+    margin-top: 20px;
+}
+
+.spinner {
+    display: block;
+    margin: auto;
+}
+
 /* * NAVBAR COMPONENT */
 .navbar {
     display: flex;
@@ -252,4 +263,77 @@ body {
     color: #b6b6b6;
     font-weight: bold;
     font-family: "Monolisa Light";
+}
+
+
+/* *Cart Img */
+
+.shoppingcartimg {
+    position: relative;
+    width: 50px;
+    height: 50px;
+}
+
+.cart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+}
+
+.cartimg {
+    display: block;
+    margin: auto;
+}
+
+
+.noOfProducts {
+    position: absolute;
+    color: rgb(255, 255, 255);
+    background-color: crimson;
+    padding: 3px 8px;
+    border-radius: 50%;
+    top: 0px;
+    right: 0px;
+    font-size: 12px;
+}
+
+/* * Hero Component */
+
+.imagesSlider {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+}
+
+.sliderImg {
+    width: 100%;
+    margin: auto;
+}
+
+.prev,
+.next {
+    font-size: 20px;
+    z-index: 100;
+    position: absolute;
+    z-index: 100;
+    background: linear-gradient(to right, crimson, crimson);
+    outline: none;
+    border: none;
+    padding: 5px 10px;
+    color: whitesmoke;
+    border-radius: 99999px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.prev {
+    left: 0px;
+    top: 35%;
+}
+
+.next {
+    right: 0px;
+    top: 35%;
 }

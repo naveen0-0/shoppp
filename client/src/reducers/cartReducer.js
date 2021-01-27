@@ -1,8 +1,15 @@
+import { updatingASingleItem } from "../utils/utils";
+
 export const cartReducer = (state = [], action) => {
 
     switch (action.type) {
         case "UPDATECART":
             return action.payload
+
+        case "UPDATEANSINGLEITEM":
+            return updatingASingleItem(state, action.payload)
+
+
         default:
             return state
     }

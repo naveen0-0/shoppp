@@ -16,7 +16,7 @@ router.post('/addproduct', (req, res) => {
                             if (product.productId === productId) {
                                 product.noOfProducts++;
                                 userWithThisProduct.save().then(newNewRecord => {
-                                    console.log(newNewRecord);
+                                    res.send(newNewRecord);
                                 })
                             }
                         })
@@ -25,7 +25,7 @@ router.post('/addproduct', (req, res) => {
                     User.findOne({ username }).then(userFound => {
                         userFound.products.push({ productId: productId, noOfProducts: 1 })
                         userFound.save().then(newRecord => {
-                            console.log(newRecord);
+                            res.send(newRecord);
                         })
                     })
                 }

@@ -2,7 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import userpng from '../images/user.png';
-import shoppingcartimg from '../images/shoppingcart2.png';
+import ShoppingCartImg from './ShoppingCartImg';
+
 
 export default function NavBar() {
 
@@ -16,7 +17,7 @@ export default function NavBar() {
             {loggedIn ? (
                 <div className="cartanduser">
                     <Link className="user" to="/user"><img src={userpng} alt="User" className="userimg" /></Link>
-                    <Link className="cart" to="/cart"><img src={shoppingcartimg} alt="User" className="cartimg" /></Link>
+                    <ShoppingCartImg />
                 </div>
             ) : (
                     <div className="navbarlinks">
