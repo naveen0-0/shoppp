@@ -38,7 +38,7 @@ export const NoOfProductsForCart = cart => {
     let noOfProducts = 0;
 
     cart.map(item => {
-        noOfProducts = noOfProducts + item.noOfProducts
+        noOfProducts = noOfProducts + item.noOfProducts;
         return item;
     })
     return noOfProducts;
