@@ -10,9 +10,8 @@ export default function Product({ product }) {
     const { title, description, category, price, image, id } = product;
 
     const AddToCart = async productId => {
-        let { data } = await axios.post('/addproduct', { productId: productId, username: username })
-        console.log(data);
-        dispatch({ type: "UPDATEANSINGLEITEM", payload: { productId: productId } })
+        await axios.post('/addproduct', { productId, username, title, description, category, price, image });
+        dispatch({ type: "UPDATEANSINGLEITEM", payload: { productId, title, description, category, price, image } })
     }
 
     return (

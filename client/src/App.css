@@ -223,6 +223,11 @@ body {
     background-color: #335a8d;
     cursor: pointer;
     color: rgb(209, 205, 205);
+    transition: all 0.2s ease-in-out;
+}
+
+.addtocart:active {
+    background-color: #d63139;
 }
 
 
@@ -257,10 +262,10 @@ body {
 
 /* * Cart Component */
 .carttitle {
-    font-size: 22px;
+    font-size: 24px;
     text-align: center;
     padding: 10px 0px;
-    color: #b6b6b6;
+    color: rgb(220, 100, 20);
     font-weight: bold;
     font-family: "Monolisa Light";
 }
@@ -296,6 +301,104 @@ body {
     top: 0px;
     right: 0px;
     font-size: 12px;
+}
+
+.cartproducts {
+    width: 90%;
+    margin: auto;
+    padding: 10px;
+}
+
+.cartproduct {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0px;
+    background-color: #171718;
+    padding: 20px;
+    height: 200px;
+}
+
+
+.cartimage {
+    width: 100px;
+
+}
+
+.cartdetails {
+    flex: 1;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.cartproducttitle,
+.noofproducts,
+.totalpriceforaproduct {
+    text-align: center;
+    font-size: 18px;
+    color: #335a8d;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.cartproductprice {
+    color: orange;
+    display: inline;
+}
+
+.noofproducts {
+    min-width: 150px;
+    display: flex;
+    justify-content: space-around;
+    /* background-color: #d63139; */
+    margin: 0 auto;
+    padding: 5px 10px;
+}
+
+.cartproductincrement,
+.cartproductdecrement {
+    outline: none;
+    border: none;
+    cursor: pointer;
+    flex: 1;
+    border-radius: 9999px;
+    background-color: #233e96;
+    font-size: 20px;
+}
+
+.noofproductsnumber {
+    font-size: 20px;
+    flex: 1;
+    color: crimson;
+}
+
+.totalpriceforaproduct {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+
+.fullprice {
+    background-color: rgb(22, 143, 123);
+    text-align: center;
+    font-size: 30px;
+    color: #171718;
+    width: 90%;
+    margin: 10px auto;
+    padding: 20px 0px;
+    border-radius: 99999px;
+}
+
+.noproducts {
+    font-size: 16px;
+    color: rgb(31, 128, 119);
+    background-color: #171718;
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    padding: 10px;
+    border-radius: 9999px;
 }
 
 /* * Hero Component */
@@ -336,4 +439,23 @@ body {
 .next {
     right: 0px;
     top: 35%;
+}
+
+
+/* * Media Queries */
+
+@media screen and (max-width:700px) {
+    .cartproduct {
+        flex-direction: column;
+    }
+
+    .cartproductimage {
+        display: block;
+        margin: auto;
+    }
+
+    .cartpriceandtitle {
+        width: 100%;
+        margin-top: 10px;
+    }
 }

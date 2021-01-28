@@ -1,4 +1,3 @@
-import { set } from 'mongoose';
 import React, { Fragment, useEffect, useState } from 'react';
 import { getAllProducts } from '../utils/utils';
 import Hero from "./Hero";

@@ -1,13 +1,15 @@
 import React, { Fragment } from 'react';
-import CartProduct from './CartProduct';
 import { useSelector } from 'react-redux'
 import { Redirect } from 'react-router-dom';
 
+import CartProduct from './CartProduct';
+import { TotalPrice } from './TotalPrice';
 
 
 export default function Cart() {
 
     const { loggedIn } = useSelector(state => state.user);
+    const cart = useSelector(state => state.cart);
 
 
 
@@ -16,7 +18,10 @@ export default function Cart() {
     return (
         <Fragment>
             <div className="carttitle">Products in Cart</div>
-            <CartProduct />
+            <div className="cartproducts">
+                {cart.map((item, index) => <CartProduct item={item} key={index} />)}
+            </div>
+            <TotalPrice cart={cart} />
         </Fragment>
     )
 }

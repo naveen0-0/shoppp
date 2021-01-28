@@ -1,4 +1,5 @@
 import { updatingASingleItem } from "../utils/utils";
+import { REMOVEITEMFROMCART } from '../utils/utils';
 
 export const cartReducer = (state = [], action) => {
 
@@ -7,7 +8,10 @@ export const cartReducer = (state = [], action) => {
             return action.payload
 
         case "UPDATEANSINGLEITEM":
-            return updatingASingleItem(state, action.payload)
+            return updatingASingleItem(state, action.payload);
+
+        case "REMOVEITEMFROMCART":
+            return REMOVEITEMFROMCART(state, action.payload);
 
 
         default:
