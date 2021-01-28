@@ -54,7 +54,7 @@ export const FormatPrice = price => {
 export const TotalCartPrice = cart => {
     let totalprice = 0;
     if (cart.length === 0) return 0;
-    cart.map(product => totalprice = totalprice + (product.noOfProducts * product.price))
+    cart.map(product => totalprice = totalprice + (product.noOfProducts * product.price));
     return totalprice.toFixed(2);
 }
 
@@ -71,7 +71,7 @@ export const REMOVEITEMFROMCART = (cart, removeItem) => {
                 newCart.push(product);
             }
         } else {
-            newCart.push(product)
+            newCart.push(product);
         }
     });
 
