@@ -28,9 +28,9 @@ export default function CartProduct({ item }) {
 
     return (
         <div className="cartproduct">
-            <div className="cartimagecontainer">
+            {/* <div className="cartimagecontainer">
                 <img src={item.image} alt="CartImage" className="cartimage" />
-            </div>
+            </div> */}
 
             <div className="cartdetails">
                 <div className="cartproducttitle">{item.title} (<div className="cartproductprice">${item.price}</div>)</div>
