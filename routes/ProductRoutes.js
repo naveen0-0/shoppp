@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const User = require('../models/User');
+const { defaultProducts } = require('../utils/DefaultProducts');
 
 
 //* Adding Product to the Cart
@@ -91,5 +92,13 @@ router.post('/removeproduct', (req, res) => {
         }
     }).catch(err => console.log(3, err));
 })
+
+
+
+//* Default Products
+router.get('/defaultproducts', (req, res) => {
+    res.send(defaultProducts)
+})
+
 
 module.exports = router;

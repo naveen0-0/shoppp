@@ -10,7 +10,7 @@ import HomePage from './components/HomePage';
 import User from './components/User';
 import Cart from './components/Cart';
 
-import { getUser, gettingCartProducts } from './utils/utils';
+import { getUser } from './utils/utils';
 
 
 
@@ -23,12 +23,6 @@ export default function App() {
         getUser()
             .then(data => { dispatch({ type: "LOGGEDIN", payload: { username: data.username, email: data.email, loggedIn: data.loggedIn } }) })
             .catch(() => console.log("User Error"))
-
-
-        gettingCartProducts(username)
-            .then(data => { dispatch({ type: "UPDATECART", payload: data }) })
-            .catch(() => console.log("Cart Error"))
-
     }, [dispatch, username]);
 
     return (

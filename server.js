@@ -42,4 +42,4 @@ if (process.env.NODE_ENV === 'production') {
 
 
 //* Listening port
-app.listen(process.env.PORT, () => { console.log("http://localhost:5000"); })
+app.listen(process.env.PORT, () => { console.log(`http://localhost:${process.env.PORT}`); })

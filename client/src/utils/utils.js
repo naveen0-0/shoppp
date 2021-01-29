@@ -7,7 +7,7 @@ export const getUser = async () => {
 
 
 export const getAllProducts = async () => {
-    let { data } = await axios.get("https://fakestoreapi.com/products");
+    let { data } = await axios.get("/defaultproducts");
     return data;
 }
 
