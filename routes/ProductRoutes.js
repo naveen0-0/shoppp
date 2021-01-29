@@ -64,6 +64,8 @@ router.get('/cartproducts/:username', async (req, res) => {
 
 
 //* Removing an item from the cart
+//* Added now for commit
+
 router.post('/removeproduct', (req, res) => {
     const { username, productId } = req.body;
 
@@ -75,19 +77,19 @@ router.post('/removeproduct', (req, res) => {
                         user.products.splice(index, index + 1)
                         user.save().then(() => {
                             res.send("Product deleted");
-                        }).catch(err => console.log(1, err))
+                        }).catch(err => console.log(1, err));
                     } else {
                         product.noOfProducts--;
                         user.save().then(() => {
-                            res.send("No of products decresed by 1")
-                        }).catch(err => console.log(2, err))
+                            res.send("No of products decresed by 1");
+                        }).catch(err => console.log(2, err));
                     }
                 }
             })
         } else {
             return res.send("You need to login");
         }
-    }).catch(err => console.log(3, err))
+    }).catch(err => console.log(3, err));
 })
 
 module.exports = router;
