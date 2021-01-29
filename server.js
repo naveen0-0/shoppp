@@ -25,11 +25,20 @@ dotenv.config();
 
 
 //* MongoDB Connection
-mongoose.connect("mongodb://localhost/Shoppp", { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: true })
+mongoose.connect(process.env.MONGO || "mongodb://localhost/Shoppp", { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: true })
     .then(() => console.log("Database Connection Successful"))
     .catch(() => console.log("Database Error"))
 
 
+//* Production Build
+if (process.env.NODE_ENV === 'production') {
+    app.use(express.static('client/build'));
+    app.get('*', (req, res) => {
+        res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'))
+    })
+}
+
+
 
 //* Listening port
-app.listen(5000, () => { console.log("http://localhost:5000"); })
+app.listen(process.env.PORT, () => { console.log("http://localhost:5000"); })
