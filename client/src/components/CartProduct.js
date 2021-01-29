@@ -41,6 +41,8 @@ export default function CartProduct({ item }) {
                 </div>
                 <div className="totalpriceforaproduct">${FormatPrice(item.price * item.noOfProducts)}</div>
             </div>
+
+            
         </div>
     )
 }

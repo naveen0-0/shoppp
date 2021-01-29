@@ -315,7 +315,7 @@ body {
     margin: 20px 0px;
     background-color: #171718;
     padding: 20px;
-    height: 200px;
+    min-height: 200px;
 }
 
 
@@ -337,9 +337,6 @@ body {
     text-align: center;
     font-size: 18px;
     color: #335a8d;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
 }
 
 .cartproductprice {
@@ -444,18 +441,23 @@ body {
 
 /* * Media Queries */
 
-@media screen and (max-width:700px) {
+
+@media screen and (max-width:1100px) {
     .cartproduct {
         flex-direction: column;
+        height: 320px;
     }
 
-    .cartproductimage {
+    .cartimage {
         display: block;
         margin: auto;
     }
 
-    .cartpriceandtitle {
-        width: 100%;
-        margin-top: 10px;
+    .cartdetails {
+        height: 120px;
+        margin-top: 20px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
     }
 }

@@ -67,10 +67,27 @@ router.get('/cartproducts/:username', async (req, res) => {
 router.post('/removeproduct', (req, res) => {
     const { username, productId } = req.body;
 
-    
-
-
-    res.send("Product Removed")
+    User.findOne({ username }).then(user => {
+        if (user) {
+            user.products.map((product, index) => {
+                if (product.productId === productId) {
+                    if (product.noOfProducts === 1) {
+                        user.products.splice(index, index + 1)
+                        user.save().then(() => {
+                            res.send("Product deleted");
+                        }).catch(err => console.log(1, err))
+                    } else {
+                        product.noOfProducts--;
+                        user.save().then(() => {
+                            res.send("No of products decresed by 1")
+                        }).catch(err => console.log(2, err))
+                    }
+                }
+            })
+        } else {
+            return res.send("You need to login");
+        }
+    }).catch(err => console.log(3, err))
 })
 
 module.exports = router;
