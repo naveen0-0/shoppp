@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import axios from 'axios';
 
@@ -17,7 +17,7 @@ export default function Product({ product }) {
     return (
         <div className="product">
             <div className="producttitle">{title}</div>
-            {/* <div className="productimgcontainer" ><img src={image} alt="ProductImage" className="productimg" /></div> */}
+            <div className="productimgcontainer" ><img src={image} alt="ProductImage" className="productimg" /></div>
             <div className="productdescription">{description}</div>
             <div className="productcategory">Category : {category}</div>
             <div className="priceandcart">
