@@ -1,6 +1,5 @@
 import React, { Fragment, useEffect, useState } from 'react';
 import { getAllProducts } from '../utils/utils';
-import Hero from "./Hero";
 import Product from './Product';
 import { Spinner } from './Spinner';
 
