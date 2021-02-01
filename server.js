@@ -4,7 +4,7 @@ const cookieParser = require('cookie-parser');
 const morgan = require('morgan');
 const helmet = require('helmet');
 const cors = require('cors');
-const dotenv = require('dotenv')
+const dotenv = require('dotenv');
 const AuthenRoutes = require('./routes/AuthenRoutes');
 const ProductRoutes = require('./routes/ProductRoutes');
 
@@ -25,7 +25,13 @@ dotenv.config();
 
 
 //* MongoDB Connection
-mongoose.connect(process.env.MONGO || "mongodb://localhost/Shoppp", { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: true })
+mongoose
+    .connect(process.env.MONGO || "mongodb://localhost/Shoppp",
+        {
+            useNewUrlParser: true,
+            useUnifiedTopology: true,
+            useFindAndModify: true
+        })
     .then(() => console.log("Database Connection Successful"))
     .catch(() => console.log("Database Error"))
 

@@ -398,45 +398,9 @@ body {
     border-radius: 9999px;
 }
 
-/* * Hero Component */
+/* ! Hero Component */
 
-.imagesSlider {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    position: relative;
-}
 
-.sliderImg {
-    width: 100%;
-    margin: auto;
-}
-
-.prev,
-.next {
-    font-size: 20px;
-    z-index: 100;
-    position: absolute;
-    z-index: 100;
-    background: linear-gradient(to right, crimson, crimson);
-    outline: none;
-    border: none;
-    padding: 5px 10px;
-    color: whitesmoke;
-    border-radius: 99999px;
-    font-size: 12px;
-    cursor: pointer;
-}
-
-.prev {
-    left: 0px;
-    top: 35%;
-}
-
-.next {
-    right: 0px;
-    top: 35%;
-}
 
 
 /* * Media Queries */

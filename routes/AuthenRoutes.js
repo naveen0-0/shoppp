@@ -4,8 +4,7 @@ const jwt = require('jsonwebtoken');
 
 
 
-//* SignUp Route
-
+//! SignUp Route
 router.post('/signup', async (req, res) => {
     const { username, email, password, confirmPassword } = req.body;
     let userFoundWithThisUsername = await User.findOne({ username });
@@ -22,8 +21,7 @@ router.post('/signup', async (req, res) => {
 
 
 
-//* Login Route
-
+//@ Login Route
 router.post('/login', async (req, res) => {
 
     const { username, password } = req.body;
@@ -31,15 +29,17 @@ router.post('/login', async (req, res) => {
     if (!userFoundWithThisUsername) return res.send({ msg: "Username Doesn't Exists", username: "", email: "", loggedIn: false })
     if (userFoundWithThisUsername.password !== password) return res.send({ msg: "Password Incorrect", username: "", email: "", loggedIn: false });
 
-    jwt.sign({ username: userFoundWithThisUsername.username, email: userFoundWithThisUsername.email }, process.env.ACCESS_TOKEN, (err, token) => {
+    jwt.sign({
+        username: userFoundWithThisUsername.username,
+        email: userFoundWithThisUsername.email
+    }, process.env.ACCESS_TOKEN, (err, token) => {
         if (err) res.send({ msg: "Token Error, Try Again", username: "", email: "", loggedIn: false });
         return res.cookie("logintoken", token).send({ msg: "", username, email: userFoundWithThisUsername.email, loggedIn: true })
     })
 })
 
 
-//* Getting the user
-
+//@ Getting the user
 router.get('/getuser', (req, res) => {
     const { logintoken } = req.cookies;
     if (!logintoken) return res.send({ username: "", email: "", loggedIn: false })
@@ -52,8 +52,7 @@ router.get('/getuser', (req, res) => {
 
 
 
-//* Logout Route
-
+//@ Logout Route
 router.post('/logout', (req, res) => {
     res.clearCookie("logintoken").send({ username: "", email: "", loggedIn: false })
 })

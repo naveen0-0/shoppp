@@ -17,7 +17,7 @@ export default function HomePage() {
 
     return (
         <Fragment>
-            <Hero />
+            {/* <Hero /> */}
             <div className="allproductstitle">Available products</div>
 
             {loading ? <Spinner /> : (
