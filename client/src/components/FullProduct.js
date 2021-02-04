@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Spinner } from './Spinner';
 import Axios from 'axios';
-import { useSelector, useDispatch } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux';
 
 
 
@@ -33,7 +33,7 @@ export default function FullProduct({ match }) {
     const productImages = [shop1, shop2, shop3, shop4, shop5, shop6, shop7, shop8, shop9, shop10, shop11, shop12, shop13, shop14, shop15, shop16, shop17, shop18, shop19, shop20]
     const [loading, setLoading] = useState(true);
     const [fullProduct, setFullProduct] = useState({});
-    const { loggedIn, username } = useSelector(state => state.user)
+    const { loggedIn, username } = useSelector(state => state.user);
     const dispatch = useDispatch();
 
 
