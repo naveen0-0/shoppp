@@ -27,7 +27,7 @@ export const updatingASingleItem = (cart, newItem) => {
         }
         return item;
     })
-    if (newItemOrNot) return [...cart, { productId: newItem.productId, noOfProducts: 1, title: newItem.title, description: newItem.description, category: newItem.category, price: newItem.price, image: newItem.image }];
+    if (newItemOrNot) return [...cart, { productId: newItem.productId, noOfProducts: 1, title: newItem.title, description: newItem.description, category: newItem.category, price: newItem.price }];
     return newCart;
 }
 
@@ -77,3 +77,4 @@ export const REMOVEITEMFROMCART = (cart, removeItem) => {
 
     return newCart;
 }
+

@@ -21,10 +21,6 @@ const productSchema = new Schema({
         type: Number,
         required: true
     },
-    image: {
-        type: String,
-        required: true
-    },
     noOfProducts: {
         type: Number,
         required: true

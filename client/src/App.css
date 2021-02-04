@@ -28,7 +28,7 @@ body {
     font-size: 14px;
     font-family: "Monolisa Light";
     padding: 10px;
-    background-color: rgb(51, 90, 141);
+    background-color: rgb(150, 37, 56);
 }
 
 .navbartitle {
@@ -159,6 +159,7 @@ body {
     border-radius: 8px;
     cursor: pointer;
     transition: all 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+    text-decoration: none;
 }
 
 .product:hover {
@@ -295,7 +296,7 @@ body {
 .noOfProducts {
     position: absolute;
     color: rgb(255, 255, 255);
-    background-color: crimson;
+    background-color: rgb(220, 83, 20);
     padding: 3px 8px;
     border-radius: 50%;
     top: 0px;
@@ -379,11 +380,11 @@ body {
 .fullprice {
     background-color: rgb(22, 143, 123);
     text-align: center;
-    font-size: 30px;
+    font-size: 22px;
     color: #171718;
     width: 90%;
     margin: 10px auto;
-    padding: 20px 0px;
+    padding: 10px 0px;
     border-radius: 99999px;
 }
 
@@ -401,7 +402,61 @@ body {
 /* ! Hero Component */
 
 
+/* * Full Product */
 
+.fulltitle {
+    text-align: center;
+    width: 90%;
+    margin: auto;
+    padding: 20px 0px;
+    color: #0f6ba0;
+    font-size: 20px;
+    font-family: "Fira Code";
+}
+
+.fullimage img {
+    display: block;
+    width: 200px;
+    margin: auto;
+    border-radius: 10px;
+}
+
+.fulldescription {
+    text-align: center;
+    width: 90%;
+    margin: auto;
+    padding: 20px 0px;
+    color: rgb(138, 138, 139);
+    font-size: 14px;
+    font-family: "Monolisa Light";
+}
+
+.fullproductprice {
+    text-align: center;
+    font-size: 30px;
+    margin: 10px 0px;
+    color: crimson;
+}
+
+.fullcategory {
+    text-align: center;
+    color: rgb(148, 144, 144);
+    font-family: "Monolisa Light";
+}
+
+.fullproductaddtocart {
+    padding: 8px 10px;
+    outline: none;
+    border: none;
+    border-radius: 99999px;
+    font-family: "Monolisa Light";
+    background-color: #0f6ba0;
+    cursor: pointer;
+    color: rgb(209, 205, 205);
+    transition: all 0.2s ease-in-out;
+    margin: auto;
+    display: block;
+}
 
 /* * Media Queries */
 

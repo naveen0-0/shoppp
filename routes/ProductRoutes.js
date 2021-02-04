@@ -6,7 +6,7 @@ const { defaultProducts } = require('../utils/DefaultProducts');
 //* Adding Product to the Cart
 
 router.post('/addproduct', (req, res) => {
-    const { productId, username, title, description, category, price, image } = req.body;
+    const { productId, username, title, description, category, price } = req.body;
 
     User.findOne({ username }).then(user => {
         if (user) {
@@ -25,7 +25,7 @@ router.post('/addproduct', (req, res) => {
                     })
                 } else {
                     User.findOne({ username }).then(userFound => {
-                        userFound.products.push({ productId, username, title, description, category, price, image, noOfProducts: 1 })
+                        userFound.products.push({ productId, username, title, description, category, price, noOfProducts: 1 })
                         userFound.save().then(newRecord => {
                             res.send("Cart Updated");
                         })
@@ -56,7 +56,6 @@ router.get('/cartproducts/:username', async (req, res) => {
             description: product.description,
             category: product.category,
             price: product.price,
-            image: product.image
         }
     })
     res.send(products)
@@ -98,6 +97,11 @@ router.post('/removeproduct', (req, res) => {
 //* Default Products
 router.get('/defaultproducts', (req, res) => {
     res.send(defaultProducts)
+})
+
+
+router.get("/defaultproducts/:id", (req, res) => {
+    res.send(defaultProducts[req.params.id])
 })
 
 

@@ -4,7 +4,7 @@ const jwt = require('jsonwebtoken');
 
 
 
-//! SignUp Route
+//@SignUp Route
 router.post('/signup', async (req, res) => {
     const { username, email, password, confirmPassword } = req.body;
     let userFoundWithThisUsername = await User.findOne({ username });
@@ -16,7 +16,6 @@ router.post('/signup', async (req, res) => {
     User.create({ username, email, password })
         .then(() => { return res.send({ msg: "Account Created, Please go login" }) })
         .catch(() => { return res.send({ msg: "Some Error, Refresh the page and try again" }) })
-
 })
 
 

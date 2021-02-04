@@ -1,26 +1,15 @@
-import React, { Fragment, useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux'
+import React, { Fragment } from 'react';
+import { useSelector } from 'react-redux'
 import { Redirect } from 'react-router-dom';
-
 import CartProduct from './CartProduct';
 import { TotalPrice } from './TotalPrice';
-import { gettingCartProducts } from '../utils/utils'
+
 
 
 export default function Cart() {
 
-    const { loggedIn, username } = useSelector(state => state.user);
+    const { loggedIn } = useSelector(state => state.user);
     const cart = useSelector(state => state.cart);
-    const dispatch = useDispatch();
-
-    useEffect(() => {
-        gettingCartProducts(username)
-            .then(data => { dispatch({ type: "UPDATECART", payload: data }) })
-            .catch(() => console.log("Cart Error"))
-    })
-
-
-
 
     if (!loggedIn) return <Redirect to="/" />
 
@@ -34,3 +23,4 @@ export default function Cart() {
         </Fragment>
     )
 }
+
